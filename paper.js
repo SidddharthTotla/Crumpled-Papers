@@ -6,6 +6,7 @@ class Paper{
             'friction':0.5,
             'density':1.2
         }
+       // this.image = loadImage("paper.png");
         this.body =  Matter.Bodies.circle(x,y,radius,options);
         this.radius = radius;
       //  this.height = height;
@@ -14,8 +15,9 @@ class Paper{
     }
     display(){
         var pos = this.body.position;
-        ellipseMode(CENTER);
+      //  this.image = loadImage("paper.png");
+        ellipseMode(RADIUS);
         fill("green");
-        ellipse(pos.x,pos.y,this.radius); 
+        ellipse(pos.x,pos.y,this.radius,this.radius); 
     }
 }
